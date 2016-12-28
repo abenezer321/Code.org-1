@@ -1,1 +1,48 @@
 
+setBackground("Endor");
+setMap("circle");
+setDroid("R2-D2");
+setDroidSpeed("normal");
+playSound("R2-D2random");
+addCharacter("PufferPig");
+addCharacter("PufferPig");
+function whenUp() {
+  goUp();
+  function whenTouchObstacle() {
+    setBackground("random");
+    playSound("R2-D2sound1");
+    setMap("random");
+  }
+  whenTouchObstacle();
+}
+function whenDown() {
+  goDown();
+  function whenTouchObstacle() {
+    setBackground("random");
+    setDroidSpeed("fast");
+    playSound("R2-D2sound1");
+  }
+  whenTouchObstacle();
+}
+function whenLeft() {
+  goLeft();
+  function whenTouchObstacle() {
+    setBackground("random");
+    playSound("R2-D2sound1");
+    setDroidSpeed("fast");
+  }
+  whenTouchObstacle();
+  
+}
+function whenRight() {
+  goRight();
+  function whenTouchObstacle() {
+    setBackground("random");
+    playSound("R2-D2sound1");
+    setMap("random");
+  }
+  whenTouchObstacle();
+}
+function whenTouchObstacle() {
+  addPoints(100);
+}
